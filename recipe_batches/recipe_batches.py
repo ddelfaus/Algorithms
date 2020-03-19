@@ -1,11 +1,27 @@
 #!/usr/bin/python
-
+# this function should compare each dictionary to check if on how many batches you can make with the givin recipes
+#check if recipe and ingredients match
+#check how many batches you can make
 import math
-
 def recipe_batches(recipe, ingredients):
-  pass 
+  max_batches = 0
+
+  recipe_keys = set(recipe.keys())
+  ingredients_keys = set(ingredients.keys())
 
 
+  common_ingredients = set(recipe_keys).intersection(set(ingredients_keys))
+
+  if len(common_ingredients) != len(recipe):
+    return 0
+  for key, value in ingredients.items():
+    
+    batch = value // recipe[key]
+
+    if max_batches is 0 or batch < max_batches:
+      max_batches = batch
+  return max_batches
+  
 if __name__ == '__main__':
   # Change the entries of these dictionaries to test 
   # your implementation with different inputs
