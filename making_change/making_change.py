@@ -1,9 +1,15 @@
 #!/usr/bin/python
+# For example, making_change(10) should return 4, since there are 4 ways to make change for 10 cents using pennies, nickels, dimes, quarters, and half-dollars:
 
+# We can make change for 10 cents using 10 pennies
+# We can use 5 pennies and a nickel
+# We can use 2 nickels
+# We can use a single dime
 import sys
 
 def making_change(amount, denominations):
-  pass 
+  for x in denominations:
+    if x = amount: return c
 
 
 if __name__ == "__main__":
